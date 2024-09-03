@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>login_alumno</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">login_alumno</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="card-container">
+    <ion-card>
+      <img id="imgDuoc_login" src="https://upload.wikimedia.org/wikipedia/commons/a/aa/Logo_DuocUC.svg" alt="Logo_DuocUC" />
+      <ion-card-header>
+        <ion-card-title>Bienvenido a DuocUc</ion-card-title>
+        <ion-card-subtitle>Inicia sesión como Profesor o estudiante</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <form [formGroup]="usuario">
+          <ion-item>
+            <ion-input label="User" labelPlacement="floating" placeholder="User" formControlName="user"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-input label="Pass" labelPlacement="floating" placeholder="Pass" formControlName="pass"></ion-input>
+          </ion-item>
+
+          <ion-button shape="round" (click)="navegarExtras()">Login</ion-button>
+        </form>
+      </ion-card-content>
+    </ion-card> 
+  </div>
+</ion-content>
