@@ -14,16 +14,26 @@ export class LoginAlumnoPage implements OnInit {
   });
 
   constructor(private router: Router) { }
-  ngOnInit() {
-  }
+
+  ngOnInit() {}
 
   navegarExtras() {
-    let setData: NavigationExtras = {
-      state: {
-        id: this.usuario.value.user,
-        user: this.usuario.value.pass
-      }
-    };
-    this.router.navigate(['/bienvenido-alumno'], setData);
+    // Validar que el formulario esté correctamente completado antes de navegar
+    if (this.usuario.valid) {
+      const userName = this.usuario.get('user')?.value; // Asegurarse de obtener el valor del nombre de usuario
+
+      // Preparar los datos para pasar el nombre de usuario
+      let setData: NavigationExtras = {
+        state: {
+          user: userName // Enviar solo el nombre de usuario
+        }
+      };
+
+      // Navegar a la página de bienvenida
+      this.router.navigate(['/bienvenido-alumno'], setData);
+    } else {
+      console.log('El formulario no es válido');
+      // Aquí puedes manejar los errores de validación o mostrar un mensaje al usuario.
+    }
   }
 }

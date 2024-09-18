@@ -1,20 +1,70 @@
+/* Fondo suave para descansar la vista */
 ion-content {
   display: flex;
   align-items: center; /* Centra verticalmente */
   justify-content: center; /* Centra horizontalmente */
+  --background: #215c84;
 }
 
-
-
-.card-container{
-  width: 100%; /* Opcional, para asegurar que el contenedor ocupe todo el ancho disponible */
+/* Estilos para la tarjeta y los contenedores */
+.card-container {
+  width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 20px; /* Espaciado alrededor del contenido */
 }
-
 
 ion-card {
   width: 90%; /* Ajusta el ancho del card según sea necesario */
   max-width: 500px; /* Ajusta el máximo ancho del card */
+  background: rgba(255, 255, 255, 0.95); /* Fondo blanco con opacidad */
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilos para la imagen del logo */
+#imgDuoc_login {
+  width: 60%; /* Ajusta la imagen al 60% del contenedor */
+  max-width: 200px; /* Limita el tamaño máximo */
+  margin: 20px auto; /* Centra la imagen vertical y horizontalmente */
+  display: block;
+  object-fit: contain; /* Evita que la imagen se corte o deforme */
+  border-radius: 10px; /* Bordes ligeramente redondeados */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+/* Estilos para el título y subtítulo */
+ion-card-title {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #005ea3; /* Azul Duoc */
+}
+
+ion-card-subtitle {
+  text-align: center;
+  color: #333;
+  font-size: 1rem;
+}
+
+/* Contenedor de botones en fila */
+ion-card-content {
+  display: flex;
+  justify-content: space-around; /* Coloca los botones uno al lado del otro con espacio entre ellos */
+  padding: 20px;
+}
+
+/* Botones personalizados */
+ion-button {
+  width: 45%; /* Ancho de cada botón */
+  --background: #005ea3; /* Color de fondo azul */
+  --background-hover: #48cae4; /* Cambio de color al pasar el ratón */
+  --color: white; /* Texto en blanco */
+  border-radius: 20px; /* Bordes redondeados */
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+ion-button:hover {
+  --background: #48cae4; /* Cambia el fondo al pasar el ratón */
 }

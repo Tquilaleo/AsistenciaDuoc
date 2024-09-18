@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>login_alumno</ion-title>
+    <ion-title>Inicio Sesion</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -20,16 +20,22 @@
       </ion-card-header>
 
       <ion-card-content>
-        <form [formGroup]="usuario">
-          <ion-item>
-            <ion-input label="User" labelPlacement="floating" placeholder="User" formControlName="user"></ion-input>
-          </ion-item>
+        
+          <form [formGroup]="usuario">
+            <ion-item>
+              <ion-input
+                label="Usuario"
+                labelPlacement="floating"
+                placeholder="Ingrese su nombre"
+                formControlName="user"
+              ></ion-input>
+            </ion-item>
 
           <ion-item>
-            <ion-input label="Pass" labelPlacement="floating" placeholder="Pass" formControlName="pass"></ion-input>
+            <ion-input label="Contraseña" labelPlacement="floating" placeholder="Pass" formControlName="pass"></ion-input>
           </ion-item>
 
-          <ion-button shape="round" (click)="navegarExtras()">Login</ion-button>
+          <ion-button shape="round" (click)="navegarExtras()">Iniciar</ion-button>
         </form>
       </ion-card-content>
     </ion-card> 
